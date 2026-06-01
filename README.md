@@ -2,79 +2,43 @@
 
 ## Project Overview
 
-This project implements a Variational Autoencoder (VAE) using PyTorch to learn compressed latent representations of handwritten digits from the MNIST dataset.
+This project implements a Variational Autoencoder (VAE) using PyTorch on the MNIST handwritten digit dataset.
 
-The model learns to:
+## Features
 
-- Encode images into a latent space
-- Sample latent vectors
+- Train a VAE model
 - Reconstruct handwritten digits
-- Generate new handwritten digits
+- Generate new digits from latent space
+- Visualize latent space representation
 
----
+## Technologies Used
 
-## Dataset
-
-MNIST Handwritten Digits Dataset
-
-- 60,000 training images
-- 10,000 test images
-- Image size: 28 × 28 pixels
-
----
-
-## Model Architecture
-
-Encoder:
-
-784 → 400 → μ, log(σ²)
-
-Latent Dimension:
-
-2
-
-Decoder:
-
-2 → 400 → 784
-
-Activation Functions:
-
-- ReLU
-- Sigmoid
-
----
-
-## Loss Function
-
-The VAE is trained using ELBO loss:
-
-Loss = Reconstruction Loss + KL Divergence
-
----
+- Python
+- PyTorch
+- NumPy
+- Matplotlib
 
 ## Results
 
-### Training Loss Curve
+Training Loss Curve:
+(insert image)
 
-![Training Curve](training_curve.png)
+Reconstruction Results:
+(insert image)
 
-### Reconstruction Results
+Generated Digits:
+(insert image)
 
-![Reconstruction](reconstruction_results.png)
+Latent Space Visualization:
+(insert image)
 
-### Generated Digits
+## Installation
 
-![Generated Digits](generated_digits.png)
-
-### Latent Space Visualization
-
-![Latent Space](latent_space.png)
-
----
-
-## Requirements
-
-Install dependencies:
-
-```bash
 pip install -r requirements.txt
+
+## Run
+
+python train.py
+python reconstruct.py
+python generate.py
+python latent_space.py
